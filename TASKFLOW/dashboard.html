@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div class="sidebar-brand">TaskFlow</div>
+        <ul class="sidebar-menu">
+            <li class="active"><a href="#"><i class="fa-solid fa-chart-pie"></i> <span>Dashboard</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-list-check"></i> <span>My Tasks</span></a></li>
+            <li><a href="#" id="calendarBtn"><i class="fa-solid fa-calendar-days"></i><span>Calendar</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-envelope"></i> <span>Messages</span></a></li>
+            <li><a href="#"><i class="fa-solid fa-gear"></i> <span>Settings</span></a></li>
+            <li class="logout-item">
+    <a href="#" id="logoutBtn">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+    </a>
+</li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        
+        <header class="top-navbar">
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search...">
+            </div>
+            <div class="user-profile">
+                <button class="notification-btn"><i class="fa-solid fa-bell"></i></button>
+                <div class="profile-info">
+                    <i class="fa-solid fa-user"></i>
+                    <span class="profile-name">Shaik Suhana</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-info">
+                    <h3>Total Tasks</h3>
+                    <div class="value">128</div>
+                </div>
+                <i class="fa-regular fa-clipboard metric-icon"></i>
+            </div>
+            <div class="metric-card">
+                <div class="metric-info">
+                    <h3>Completed</h3>
+                    <div class="value">95</div>
+                </div>
+                <i class="fa-regular fa-file-lines metric-icon"></i>
+            </div>
+            <div class="metric-card">
+                <div class="metric-info">
+                    <h3>In Progress</h3>
+                    <div class="value">20</div>
+                </div>
+                <i class="fa-solid fa-hourglass-half metric-icon"></i>
+            </div>
+            <div class="metric-card">
+                <div class="metric-info">
+                    <h3>Pending</h3>
+                    <div class="value">13</div>
+                </div>
+                <i class="fa-solid fa-laptop-code metric-icon"></i>
+            </div>
+        </section>
+
+        <section class="dashboard-body-grid">
+            
+            <div class="dashboard-block">
+                <h2 class="block-title">Task Progress</h2>
+                <div class="graph-container">
+                    <svg viewBox="0 0 700 200" width="100%" height="100%">
+                        <line x1="50" y1="150" x2="650" y2="150" stroke="#edf2f7" stroke-width="2"/>
+                        
+                        <path d="M 50 150 L 150 100 L 250 150 L 350 85 L 450 82 L 550 135 L 650 60" 
+                              fill="none" stroke="#e2e8f0" stroke-width="3"/>
+                        
+                        <circle cx="50" cy="150" r="5" fill="#3182ce"/>
+                        <circle cx="150" cy="100" r="5" fill="#3182ce"/>
+                        <circle cx="250" cy="150" r="5" fill="#3182ce"/>
+                        <circle cx="350" cy="85" r="5" fill="#3182ce"/>
+                        <circle cx="450" cy="82" r="5" fill="#3182ce"/>
+                        <circle cx="550" cy="135" r="5" fill="#3182ce"/>
+                        <circle cx="650" cy="60" r="5" fill="#3182ce"/>
+
+                        <text x="50" y="180" text-anchor="middle" fill="#718096" font-size="12">Jan</text>
+                        <text x="150" y="180" text-anchor="middle" fill="#718096" font-size="12">Feb</text>
+                        <text x="250" y="180" text-anchor="middle" fill="#718096" font-size="12">Mar</text>
+                        <text x="350" y="180" text-anchor="middle" fill="#718096" font-size="12">Apr</text>
+                        <text x="450" y="180" text-anchor="middle" fill="#718096" font-size="12">May</text>
+                        <text x="550" y="180" text-anchor="middle" fill="#718096" font-size="12">Jun</text>
+                        <text x="650" y="180" text-anchor="middle" fill="#718096" font-size="12">Jul</text>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="dashboard-block">
+                <h2 class="block-title deadline-title">Upcoming Deadlines</h2>
+                <div class="deadline-list">
+                    <div class="deadline-item">
+                        <i class="fa-solid fa-clock-rotate-left deadline-icon"></i>
+                        <div class="deadline-details">
+                            <h4>Project Report</h4>
+                            <p>15 July</p>
+                        </div>
+                    </div>
+                    <div class="deadline-item">
+                        <i class="fa-solid fa-clock-rotate-left deadline-icon"></i>
+                        <div class="deadline-details">
+                            <h4>UI Review</h4>
+                            <p>17 July</p>
+                        </div>
+                    </div>
+                    <div class="deadline-item">
+                        <i class="fa-solid fa-clock-rotate-left deadline-icon"></i>
+                        <div class="deadline-details">
+                            <h4>Final Submission</h4>
+                            <p>28 July</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-block tasks-table-container">
+                <h2 class="block-title">Recent Tasks</h2>
+                <div class="task-input-container">
+    <input type="text" id="taskInput" placeholder="Enter a new task">
+    <button id="addTaskBtn">Add Task</button>
+</div>
+                <table class="tasks-table">
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Priority</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskList">
+                        <tr>
+                            <td>UI Design</td>
+                            <td>High</td>
+                            <td>15 Jul</td>
+                            <td><span class="status-badge done">Done</span></td>
+                        </tr>
+                        <tr>
+                            <td>Login Page</td>
+                            <td>Medium</td>
+                            <td>16 Jul</td>
+                            <td><span class="status-badge done">Done</span></td>
+                        </tr>
+                        <tr>
+                            <td>Dashboard</td>
+                            <td>High</td>
+                            <td>18 Jul</td>
+                            <td><span class="status-badge done">Done</span></td>
+                        </tr>
+                        <tr>
+                            <td>Testing</td>
+                            <td>Low</td>
+                            <td>20 Jul</td>
+                            <td><span class="status-badge done">Done</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h1>Calendar Page</h1>
+
+    <input type="date">
+
+        </section>
+    </main>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

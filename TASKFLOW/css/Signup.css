@@ -1,0 +1,174 @@
+/* Reset basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f7f9fa;
+            padding: 20px;
+        }
+
+        /* Split-screen container */
+        .signup-container {
+            display: flex;
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 950px;
+            min-height: 550px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Left Sidebar */
+        .brand-sidebar {
+            flex: 1.1;
+            background-color: #7296eb;
+            padding: 50px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            color: #ffffff;
+        }
+
+        .brand-logo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-tagline {
+            font-size: 1.05rem;
+            font-weight: 300;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        /* Right Form Section */
+        .form-section {
+            flex: 1.4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 40px;
+        }
+
+        .form-wrapper {
+            width: 100%;
+            max-width: 380px;
+            text-align: center;
+        }
+
+        .form-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #0b1a30;
+            margin-bottom: 10px;
+        }
+
+        .form-subtitle {
+            font-size: 0.9rem;
+            color: #7c8ba1;
+            font-weight: 500;
+            margin-bottom: 35px;
+        }
+
+        /* Form layout */
+        .signup-form {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 14px 20px;
+            font-size: 0.95rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            outline: none;
+            background-color: #fcfdfe;
+            color: #333333;
+            transition: border-color 0.2s ease, background-color 0.2s ease;
+        }
+
+        .input-group input::placeholder {
+            color: #a0aec0;
+            font-weight: 400;
+        }
+
+        .input-group input:focus {
+            border-color: #7296eb;
+            background-color: #ffffff;
+        }
+
+        /* Primary Button */
+        .signup-btn {
+            width: 100%;
+            padding: 14px;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #ffffff;
+            background-color: #7296eb;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        .signup-btn:hover {
+            background-color: #5c81d6;
+        }
+
+        .signup-btn:active {
+            transform: scale(0.99);
+        }
+
+        /* Redirect text styling */
+        .login-redirect {
+            font-size: 0.95rem;
+            color: #718096;
+            font-weight: 500;
+        }
+
+        .login-redirect a {
+            color: #2b6cb0;
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+
+        .login-redirect a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive design for tablets/phones */
+        @media (max-width: 768px) {
+            .signup-container {
+                flex-direction: column;
+                max-width: 450px;
+                min-height: auto;
+            }
+            .brand-sidebar {
+                padding: 40px 30px;
+                text-align: center;
+            }
+            .brand-logo {
+                margin-bottom: 10px;
+            }
+            .form-section {
+                padding: 40px 25px;
+            }
+        }
